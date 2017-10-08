@@ -1,16 +1,27 @@
 html, body {
-  background-color: white;
+  background-color: black;
+  font-family: "Oxygen";
 }
 
 #userInput {
   border-radius: 30px;
   width: 50%;
-  background-color: none;
+  background-color: purple;
   border-color: purple;
   outline: none;
   box-shadow: none;
   font-family: 'Oxygen';
   display: inline-block;
-  margin: auto;
+  text-align: center;
+  border-bottom-color: purple;
+  border-top-color: purple !important;
+  border-style: solid;
+  color: white;
+  margin: 0 auto;
+}
+
+.randomArticle {}
+
+.test {
   text-align: center;
 }

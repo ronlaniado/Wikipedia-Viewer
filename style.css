@@ -17,7 +17,7 @@ html, body {
   border-top-color: purple !important;
   border-style: solid;
   color: white;
-  margin: 0 auto;
+  margin-top: 15%;
 }
 
 .randomArticle {}

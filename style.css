@@ -1,3 +1,16 @@
-html {
-  background-color: blue;
+html, body {
+  background-color: white;
+}
+
+#userInput {
+  border-radius: 30px;
+  width: 50%;
+  background-color: none;
+  border-color: purple;
+  outline: none;
+  box-shadow: none;
+  font-family: 'Oxygen';
+  display: inline-block;
+  margin: auto;
+  text-align: center;
 }

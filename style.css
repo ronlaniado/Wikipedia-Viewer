@@ -18,10 +18,15 @@ html, body {
   border-style: solid;
   color: white;
   margin-top: 15%;
+  background: url("https://i.imgur.com/UrsVuqm.png") no-repeat;
+  background-size: 15px 15px;
+  background-position: 450px;
 }
 
-.randomArticle {}
+.randomArticle {
+  padding-top: 15px;
+}
 
-.test {
+.centerItems {
   text-align: center;
 }

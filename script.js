@@ -8,8 +8,8 @@ function searchWiki() {
 }
 
 document.addEventListener("keyup", function(event) {
-  event.preventDefault();
   if (event.keyCode == 13) {
+    event.preventDefault();
     $("#userInput").animate({
       marginTop: "1.5%",
       height: "35px",

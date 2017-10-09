@@ -7,16 +7,12 @@ function searchWiki() {
   });
 }
 
-$(document).keypress(function(e) { //function takes in the parameter of "e"
+$("#userInput").keypress(function(e) { //function takes in the parameter of "e"
   if (e.which == 13) { //if user presses enter
     //do this
     $("#userInput").animate({
-      width: "70%",
-      opacity: 0.4,
-      marginLeft: "0.6in",
-      fontSize: "3em",
-      borderWidth: "10px"
-    }, 1500);
+      marginTop: "1.5%",
+    }, 800);
     console.log("test");
   }
 });

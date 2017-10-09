@@ -9,6 +9,7 @@ function searchWiki() {
 document.getElementById("userInput").addEventListener("keyup", function(event) {
   event.preventDefault();
   console.log("test2");
+  alert("test2");
   return false;
 });
 
@@ -25,4 +26,3 @@ document.addEventListener("keyup", function(event) {
 
   }
 });
-$(document).ready()

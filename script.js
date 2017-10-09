@@ -20,4 +20,5 @@ document.addEventListener("keyup", function(event) {
 });
 document.getElementById("userInput").addEventListener("keyup", function(event) {
   event.preventDefault();
+  console.log("test");
 });

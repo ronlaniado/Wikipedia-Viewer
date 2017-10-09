@@ -6,6 +6,10 @@ function searchWiki() {
 
   });
 }
+document.getElementById("userInput").addEventListener("keyup", function(event) {
+  event.preventDefault();
+  console.log("test2");
+});
 
 document.addEventListener("keyup", function(event) {
   if (event.keyCode == 13) {
@@ -17,8 +21,4 @@ document.addEventListener("keyup", function(event) {
     }, 800);
     console.log("test");
   }
-});
-document.getElementById("userInput").addEventListener("keyup", function(event) {
-  event.preventDefault();
-  console.log("test2");
 });

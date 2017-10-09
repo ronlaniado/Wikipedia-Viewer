@@ -7,9 +7,9 @@ function searchWiki() {
   });
 }
 
-$(document).keypress(function(e) { //function takes in the parameter of "e"
-  if (e.which == 13) { //if user presses enter
-    //do this
+document.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode == 13) {
     $("#userInput").animate({
       marginTop: "1.5%",
       height: "35px",

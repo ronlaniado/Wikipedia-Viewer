@@ -8,19 +8,21 @@ function searchWiki() {
 }
 document.getElementById("userInput").addEventListener("keyup", function(event) {
   event.preventDefault();
-  return false;
   console.log("test2");
+  return false;
 });
 
 document.addEventListener("keyup", function(event) {
   if (event.keyCode == 13) {
     event.preventDefault();
-    return false;
     $("#userInput").animate({
       marginTop: "1.5%",
       height: "35px",
       fontSize: "18px",
     }, 800);
     console.log("test");
+    return false;
+
   }
 });
+$(document).ready()

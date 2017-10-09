@@ -11,7 +11,7 @@ document.getElementById("userInput").onkeypress = function(e) {
   if (key == 13) {
     e.preventDefault();
   }
-}
+};
 
 
 document.addEventListener("keyup", function(event) {

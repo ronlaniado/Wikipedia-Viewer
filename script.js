@@ -6,3 +6,10 @@ function searchWiki() {
 
   });
 }
+
+$(document).keypress(function(e) { //function takes in the parameter of "e"
+  if (e.which == 13) { //if user presses enter
+    //do this
+    console.log("test");
+  }
+});

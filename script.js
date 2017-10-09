@@ -7,11 +7,13 @@ function searchWiki() {
   });
 }
 
-$("#userInput").keypress(function(e) { //function takes in the parameter of "e"
+$(document).keypress(function(e) { //function takes in the parameter of "e"
   if (e.which == 13) { //if user presses enter
     //do this
     $("#userInput").animate({
       marginTop: "1.5%",
+      height: "35px",
+      fontSize: "18px",
     }, 800);
     console.log("test");
   }

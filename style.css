@@ -6,6 +6,7 @@ html, body {
 #userInput {
   border-radius: 30px;
   width: 50%;
+  height: 64px;
   background-color: purple;
   border-color: purple;
   outline: none;
@@ -18,9 +19,8 @@ html, body {
   border-style: solid;
   color: white;
   margin-top: 15%;
-  background: url("https://i.imgur.com/UrsVuqm.png") no-repeat;
-  background-size: 15px 15px;
-  background-position: 450px;
+  background-color: transparent;
+  font-size: 34px;
 }
 
 .randomArticle {
@@ -39,6 +39,12 @@ html, body {
 
 .centerItems {
   text-align: center;
+}
+
+#searchIcon {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
 }
 
 /* Wobble Horizontal */

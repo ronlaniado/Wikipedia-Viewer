@@ -6,12 +6,13 @@ function searchWiki() {
 
   });
 }
-document.getElementById("userInput").addEventListener("keyup", function(event) {
-  event.preventDefault();
-  console.log("test2");
-  alert("test2");
-  return false;
-});
+document.getElementById("userInput").onkeypress = function(e) {
+  var key = e.charCode || e.keyCode || 0;
+  if (key == 13) {
+    e.preventDefault();
+  }
+}
+
 
 document.addEventListener("keyup", function(event) {
   if (event.keyCode == 13) {
@@ -22,7 +23,6 @@ document.addEventListener("keyup", function(event) {
       fontSize: "18px",
     }, 800);
     console.log("test");
-    return false;
 
   }
 });

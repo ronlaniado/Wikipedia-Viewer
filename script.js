@@ -8,7 +8,7 @@ function searchWiki() {
 }
 
 document.addEventListener("keyup", function(event) {
-  if (event.keyCode == 16) {
+  if (event.keyCode == 13) {
     event.preventDefault();
     $("#userInput").animate({
       marginTop: "1.5%",
@@ -17,4 +17,7 @@ document.addEventListener("keyup", function(event) {
     }, 800);
     console.log("test");
   }
+});
+document.getElementById("userInput").addEventListener("keyup", function(event) {
+  event.preventDefault();
 });

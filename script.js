@@ -41,6 +41,35 @@ document.addEventListener("keyup", function(event) {
       document.querySelector("#card3").style.display = "block";
       $("#card3").animateCss("fadeInLeft");
     }, 300);
+    setTimeout(function() {
+      document.querySelector("#card4").style.display = "block";
+      $("#card4").animateCss("fadeInLeft");
+    }, 400);
+    setTimeout(function() {
+      document.querySelector("#card5").style.display = "block";
+      $("#card5").animateCss("fadeInLeft");
+    }, 500);
+
+    setTimeout(function() {
+      document.querySelector("#card6").style.display = "block";
+      $("#card6").animateCss("fadeInLeft");
+    }, 600);
+    setTimeout(function() {
+      document.querySelector("#card7").style.display = "block";
+      $("#card7").animateCss("fadeInLeft");
+    }, 600);
+    setTimeout(function() {
+      document.querySelector("#card8").style.display = "block";
+      $("#card8").animateCss("fadeInLeft");
+    }, 600);
+    setTimeout(function() {
+      document.querySelector("#card9").style.display = "block";
+      $("#card9").animateCss("fadeInLeft");
+    }, 600);
+    setTimeout(function() {
+      document.querySelector("#card10").style.display = "block";
+      $("#card10").animateCss("fadeInLeft");
+    }, 600);
 
   }
 });

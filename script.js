@@ -37,7 +37,10 @@ document.addEventListener("keyup", function(event) {
       document.querySelector("#card2").style.display = "block";
       $("#card2").animateCss("fadeInLeft");
     }, 200);
-    console.log("test");
+    setTimeout(function() {
+      document.querySelector("#card3").style.display = "block";
+      $("#card3").animateCss("fadeInLeft");
+    }, 300);
 
   }
 });

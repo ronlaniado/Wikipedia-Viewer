@@ -123,7 +123,11 @@ html, body {
 }
 
 .card-subtitle {
-  color: rgb(66, 66, 66);
+  color: rgb(173, 173, 173);
+}
+
+.card-title {
+  color: rgb(255, 255, 255);
 }
 
 .card {
@@ -131,4 +135,12 @@ html, body {
   margin-right: 35px;
   margin-top: 25px;
   display: none;
+  background-color: transparent;
+  border-color: purple;
+}
+
+.card-block {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 6px;
 }

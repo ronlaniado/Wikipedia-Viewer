@@ -13,15 +13,26 @@ document.getElementById("userInput").onkeypress = function(e) {
   }
 };
 
+$.fn.extend({ //function that makes it easy to do animations
+  animateCss: function(animationName) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    this.addClass('animated ' + animationName).one(animationEnd, function() {
+      $(this).removeClass('animated ' + animationName);
+    });
+    return this;
+  }
+});
 
 document.addEventListener("keyup", function(event) {
   if (event.keyCode == 13) {
-    event.preventDefault();
-    $("#userInput").animate({
+    event.preventDefault(); //Disables the form from being submitted
+    $("#userInput").animate({ //animates the search box
       marginTop: "1.5%",
       height: "35px",
       fontSize: "18px",
     }, 800);
+    document.querySelector(".card").style.display = "block"; //makes the card not hidden
+    $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     console.log("test");
 
   }

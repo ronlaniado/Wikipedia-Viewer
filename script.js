@@ -1,5 +1,5 @@
 var endpoint = "https://en.wikipedia.org/w/api.php"; //Base Url for making an API request. It's essentially the homepage of the API.
-var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="; //The final url before it is called in an ajax request.
+var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&origin=*&list=search&srsearch="; //The final url before it is called in an ajax request.
 var searchText;
 
 function searchWiki() {
@@ -38,6 +38,7 @@ document.addEventListener("keyup", function(event) {
       fontSize: "18px",
     }, 1000);
     searchWiki();
+
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     setTimeout(function() {

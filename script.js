@@ -33,6 +33,10 @@ document.addEventListener("keyup", function(event) {
     }, 1000);
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
+    setTimeout(function() {
+      document.querySelector("#card2").style.display = "block";
+      $("#card2").animateCss("fadeInLeft");
+    }, 200);
     console.log("test");
 
   }

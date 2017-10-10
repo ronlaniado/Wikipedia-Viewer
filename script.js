@@ -30,7 +30,7 @@ document.addEventListener("keyup", function(event) {
       marginTop: "1.5%",
       height: "35px",
       fontSize: "18px",
-    }, 800);
+    }, 1000);
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     console.log("test");

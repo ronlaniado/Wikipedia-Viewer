@@ -1,9 +1,15 @@
 var endpoint = "https://en.wikipedia.org/w/api.php"; //Base Url for making an API request. It's essentially the homepage of the API.
-var searchUrl; //The final url before it is called in an ajax request.
+var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="; //The final url before it is called in an ajax request.
+var searchText;
 
 function searchWiki() {
-  $.ajax({
-
+  searchText = $("#userInput").val();
+  searchText = searchText.replace(" ", "&");
+  searchUrl = searchUrl + searchText;
+  console.log(searchText);
+  console.log(searchUrl);
+  $.getJSON(searchUrl, function(data) {
+    console.log("Success!");
   });
 }
 document.getElementById("userInput").onkeypress = function(e) {
@@ -31,6 +37,7 @@ document.addEventListener("keyup", function(event) {
       height: "35px",
       fontSize: "18px",
     }, 1000);
+    searchWiki();
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     setTimeout(function() {
@@ -57,19 +64,19 @@ document.addEventListener("keyup", function(event) {
     setTimeout(function() {
       document.querySelector("#card7").style.display = "block";
       $("#card7").animateCss("fadeInLeft");
-    }, 600);
+    }, 700);
     setTimeout(function() {
       document.querySelector("#card8").style.display = "block";
       $("#card8").animateCss("fadeInLeft");
-    }, 600);
+    }, 800);
     setTimeout(function() {
       document.querySelector("#card9").style.display = "block";
       $("#card9").animateCss("fadeInLeft");
-    }, 600);
+    }, 900);
     setTimeout(function() {
       document.querySelector("#card10").style.display = "block";
       $("#card10").animateCss("fadeInLeft");
-    }, 600);
+    }, 1000);
 
   }
 });

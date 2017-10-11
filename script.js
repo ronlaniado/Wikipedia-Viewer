@@ -26,9 +26,9 @@ var link1;
 
 function searchWiki() {
   searchText = $("#userInput").val();
-  $("#userInput").val("");
+  $("#userInput").val('');
   searchText = searchText.replace(" ", "&");
-  searchUrl += searchText;
+  var finalUrl = searchUrl + searchText;
   console.log(searchText);
   console.log(searchUrl);
   $.ajax({

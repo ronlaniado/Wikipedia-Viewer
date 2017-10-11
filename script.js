@@ -1,6 +1,8 @@
 var endpoint = "https://en.wikipedia.org/w/api.php"; //Base Url for making an API request. It's essentially the homepage of the API.
-var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&origin=*&list=search&srsearch="; //The final url before it is called in an ajax request.
+var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch="; //The final url before it is called in an ajax request.
 var searchText;
+var title1;
+var subtitle1;
 
 function searchWiki() {
   searchText = $("#userInput").val();
@@ -8,8 +10,16 @@ function searchWiki() {
   searchUrl = searchUrl + searchText;
   console.log(searchText);
   console.log(searchUrl);
-  $.getJSON(searchUrl, function(data) {
-    console.log("Success!");
+  $.ajax({
+    url: searchUrl,
+    success: function(data) {
+      console.log("Wikipedia API ajax request was a success");
+      title1 = data.query.search[0].title;
+      subtitle1 = data.query.search[0].snippet;
+      console.log(title1);
+      $(".card-title1").append(title1);
+      $(".card-subtitle1").append(subtitle1 + "...");
+    }
   });
 }
 document.getElementById("userInput").onkeypress = function(e) {

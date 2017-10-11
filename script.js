@@ -26,6 +26,7 @@ var link1;
 
 function searchWiki() {
   searchText = $("#userInput").val();
+  $("#userInput").val("");
   searchText = searchText.replace(" ", "&");
   searchUrl += searchText;
   console.log(searchText);
@@ -70,7 +71,6 @@ document.addEventListener("keyup", function(event) {
       fontSize: "18px",
     }, 1000);
     searchWiki();
-    $("#userInput").val('');
     console.log($("#userInput"));
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left

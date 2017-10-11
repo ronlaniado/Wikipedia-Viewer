@@ -20,14 +20,14 @@ var subtitle5;
 var subtitle6;
 var subtitle7;
 var subtitle8;
-var subtitle9
+var subtitle9;
 var subtitle10;
 var link1;
 
 function searchWiki() {
   searchText = $("#userInput").val();
   searchText = searchText.replace(" ", "&");
-  searchUrl = searchUrl + searchText;
+  searchUrl += searchText;
   console.log(searchText);
   console.log(searchUrl);
   $.ajax({
@@ -70,7 +70,8 @@ document.addEventListener("keyup", function(event) {
       fontSize: "18px",
     }, 1000);
     searchWiki();
-
+    $("#userInput").val('');
+    console.log($("#userInput"));
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     setTimeout(function() {

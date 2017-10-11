@@ -139,8 +139,16 @@ html, body {
   border-color: purple;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .card-block {
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 6px;
+}
+
+a {
+  display: block;
 }

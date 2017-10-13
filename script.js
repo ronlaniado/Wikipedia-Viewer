@@ -41,8 +41,6 @@ function searchWiki() {
       for (var i = 0; i < data.query.search.length; i++) {
         title = data.query.search[i].title;
         subtitle = data.query.search[i].snippet;
-        //console.log(title);
-        //console.log(subtitle);
         var titleGetter = document.getElementById("title" + (i + 1));
         $(titleGetter).html(title);
         var subtitleGetter = document.getElementById("subtitle" + (i + 1));

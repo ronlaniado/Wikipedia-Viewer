@@ -41,17 +41,72 @@ function searchWiki() {
       title2 = data.query.search[1].title;
       subtitle2 = data.query.search[1].snippet;
       link2 = articleUrl + data.query.search[1].pageid;
+      title3 = data.query.search[2].title;
+      subtitle3 = data.query.search[2].snippet;
+      link3 = articleUrl + data.query.search[2].pageid;
+      title4 = data.query.search[3].title;
+      subtitle4 = data.query.search[3].snippet;
+      link4 = articleUrl + data.query.search[3].pageid;
+      title5 = data.query.search[4].title;
+      subtitle5 = data.query.search[4].snippet;
+      link5 = articleUrl + data.query.search[4].pageid;
+      title6 = data.query.search[5].title;
+      subtitle6 = data.query.search[5].snippet;
+      link6 = articleUrl + data.query.search[5].pageid;
+      title7 = data.query.search[6].title;
+      subtitle7 = data.query.search[6].snippet;
+      link7 = articleUrl + data.query.search[6].pageid;
+      title8 = data.query.search[7].title;
+      subtitle8 = data.query.search[7].snippet;
+      link8 = articleUrl + data.query.search[7].pageid;
+      title9 = data.query.search[8].title;
+      subtitle9 = data.query.search[8].snippet;
+      link9 = articleUrl + data.query.search[8].pageid;
+      title10 = data.query.search[9].title;
+      subtitle10 = data.query.search[9].snippet;
+      link10 = articleUrl + data.query.search[9].pageid;
       console.log(title1);
       console.log(link1);
       $(".card-title1").empty();
       $(".card-title2").empty();
       $(".card-subtitle1").empty();
       $(".card-subtitle2").empty();
+      $(".card-title3").empty();
+      $("card-subtitle3").empty();
+      $(".card-title4").empty();
+      $("card-subtitle4").empty();
+      $(".card-title5").empty();
+      $("card-subtitle5").empty();
+      $(".card-title6").empty();
+      $("card-subtitle6").empty();
+      $(".card-title7").empty();
+      $("card-subtitle7").empty();
+      $(".card-title8").empty();
+      $("card-subtitle8").empty();
+      $(".card-title9").empty();
+      $("card-subtitle9").empty();
+      $(".card-title10").empty();
+      $("card-subtitle10").empty();
       $(".card-title1").append(title1);
       $(".card-title2").append(title2);
       $(".card-subtitle1").append(subtitle1 + "...");
       $(".card-subtitle2").append(subtitle2 + "...");
-
+      $(".card-title3").append(title3);
+      $(".card-subtitle3").append(subtitle3 + "...");
+      $(".card-title4").append(title4);
+      $(".card-subtitle4").append(subtitle4 + "...");
+      $(".card-title5").append(title5);
+      $(".card-subtitle5").append(subtitle5 + "...");
+      $(".card-title6").append(title6);
+      $(".card-subtitle6").append(subtitle6 + "...");
+      $(".card-title7").append(title7);
+      $(".card-subtitle7").append(subtitle7 + "...");
+      $(".card-title8").append(title8);
+      $(".card-subtitle8").append(subtitle8 + "...");
+      $(".card-title9").append(title9);
+      $(".card-subtitle9").append(subtitle9 + "...");
+      $(".card-title10").append(title10);
+      $(".card-subtitle10").append(subtitle10 + "...");
     }
   });
 }
@@ -61,7 +116,6 @@ document.getElementById("userInput").onkeypress = function(e) {
     e.preventDefault();
   }
 };
-
 $.fn.extend({ //function that makes it easy to do animations
   animateCss: function(animationName) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -71,7 +125,6 @@ $.fn.extend({ //function that makes it easy to do animations
     return this;
   }
 });
-
 document.addEventListener("keyup", function(event) {
   if (event.keyCode == 13) {
     event.preventDefault(); //Disables the form from being submitted
@@ -120,7 +173,6 @@ document.addEventListener("keyup", function(event) {
       document.querySelector("#card10").style.display = "block";
       $("#card10").animateCss("fadeInLeft");
     }, 1000);
-
   }
 });
 

@@ -38,12 +38,20 @@ function searchWiki() {
       title1 = data.query.search[0].title;
       subtitle1 = data.query.search[0].snippet;
       link1 = articleUrl + data.query.search[0].pageid;
+      title2 = data.query.search[1].title;
+      subtitle2 = data.query.search[1].snippet;
+      link2 = articleUrl + data.query.search[1].pageid;
       console.log(title1);
       console.log(link1);
       $(".card-title1").empty();
+      $(".card-title2").empty();
       $(".card-subtitle1").empty();
+      $(".card-subtitle2").empty();
       $(".card-title1").append(title1);
+      $(".card-title2").append(title2);
       $(".card-subtitle1").append(subtitle1 + "...");
+      $(".card-subtitle2").append(subtitle2 + "...");
+
     }
   });
 }

@@ -2,6 +2,9 @@ var endpoint = "https://en.wikipedia.org/w/api.php"; //Base Url for making an AP
 var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&prop=info&format=json&origin=*&list=search&srsearch="; //The final url before it is called in an ajax request.
 var articleUrl = "http://en.wikipedia.org/?curid=";
 var searchText;
+var title;
+var subtitle;
+var link;
 var title1;
 var title2;
 var title3;
@@ -107,6 +110,12 @@ function searchWiki() {
       $(".card-subtitle9").append(subtitle9 + "...");
       $(".card-title10").append(title10);
       $(".card-subtitle10").append(subtitle10 + "...");
+      for (var i = 0; i < data.query.search[i].length; i++) {
+        title = data.query.search[i].title;
+        subtitle = data.query.search[i].snippet;
+        console.log(title);
+        console.log(subtitle);
+      }
     }
   });
 }

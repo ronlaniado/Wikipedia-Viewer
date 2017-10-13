@@ -30,9 +30,9 @@ function searchWiki() {
   searchText = searchText.replace(" ", "&");
   var finalUrl = searchUrl + searchText;
   console.log(searchText);
-  console.log(searchUrl);
+  console.log(finalUrl);
   $.ajax({
-    url: searchUrl,
+    url: finalUrl,
     success: function(data) {
       console.log("Wikipedia API ajax request was a success");
       title1 = data.query.search[0].title;
@@ -40,6 +40,8 @@ function searchWiki() {
       link1 = articleUrl + data.query.search[0].pageid;
       console.log(title1);
       console.log(link1);
+      $(".card-title1").empty();
+      $(".card-subtitle1").empty();
       $(".card-title1").append(title1);
       $(".card-subtitle1").append(subtitle1 + "...");
     }
@@ -71,7 +73,6 @@ document.addEventListener("keyup", function(event) {
       fontSize: "18px",
     }, 1000);
     searchWiki();
-    console.log($("#userInput"));
     document.querySelector(".card").style.display = "block"; //makes the card not hidden
     $(".card").animateCss("fadeInLeft"); //makes the card fade in left
     setTimeout(function() {

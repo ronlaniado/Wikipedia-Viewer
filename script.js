@@ -5,27 +5,7 @@ var articleUrl = "http://en.wikipedia.org/?curid=";
 var searchText;
 var title;
 var subtitle;
-var title1;
-var title2;
-var title3;
-var title4;
-var title5;
-var title6;
-var title7;
-var title8;
-var title9;
-var title10;
-var subtitle1;
-var subtitle2;
-var subtitle3;
-var subtitle4;
-var subtitle5;
-var subtitle6;
-var subtitle7;
-var subtitle8;
-var subtitle9;
-var subtitle10;
-var link1;
+var link;
 
 function searchWiki() {
   searchText = $("#userInput").val();
@@ -41,10 +21,13 @@ function searchWiki() {
       for (var i = 0; i < data.query.search.length; i++) {
         title = data.query.search[i].title;
         subtitle = data.query.search[i].snippet;
+        var link = articleUrl + data.query.search[i].pageid;
+        console.log(link);
         var titleGetter = document.getElementById("title" + (i + 1));
         $(titleGetter).html(title);
         var subtitleGetter = document.getElementById("subtitle" + (i + 1));
         $(subtitleGetter).html(subtitle);
+        var linkGetter = document.getElementById("card" + (i + 1));
       }
     }
   });
@@ -119,7 +102,3 @@ document.addEventListener("keyup", function(event) {
     }, 1000);
   }
 });
-
-function cardLink1() {
-  window.open(link1, "_blank");
-}

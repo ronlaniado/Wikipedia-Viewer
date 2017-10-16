@@ -26,7 +26,7 @@ function searchWiki() {
         var titleGetter = document.getElementById("title" + (i + 1));
         $(titleGetter).html(title);
         var subtitleGetter = document.getElementById("subtitle" + (i + 1));
-        $(subtitleGetter).html(subtitle);
+        $(subtitleGetter).html(subtitle + "...");
         var linkGetter = document.getElementById("card" + (i + 1));
         $(linkGetter).attr("onClick", "window.open('" + link + "');");
       }
